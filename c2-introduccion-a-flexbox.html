@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Flexbox</title>
+  <style>
+    .cajaHija{
+      background-color: aquamarine;
+      border: solid 1px black;
+      margin: 5px;
+      padding: 5px;
+      width: 350px;
+      height: 100px;
+      display: inline-block;
+    }
+    .cajaPadre{
+      background-color: bisque;
+      padding: 10px;
+      display: flex;
+      /* ¿Que sucede al activar display: flex?
+      1. Los items se despliegan sobre una fila (La propiedad flex direction por defecto es "row").
+      2. Los items empiezan desde el margen inicial sobre el eje principal.
+      3. Los items no se ajustan en la dimension principal, pero se pueden contraer.
+      4. Los itemse se ajustaran apra llenar el tamaño del eje cruzado.
+      5. La propiedad flex-basics es definida como "auto".
+      6. La propiedad flex-wrap es definida como "nowrap". 
+      */
+      flex-direction: row;
+      /*row, row-reverse, column, column-reverse*/
+      flex-wrap: wrap;
+      /*La propiedad flex-flow se utiliza para abreviar o unir flex--direction y flex-wrap.
+      El primer valor corresponde a Flex-direction, mientras q el segundo a flex-wrap*/
+      flex-flow: row nowrap;
+      /*ATRIBUTOS FLEX APLICADOS A LOS ATRIBUTOS HIJOS*/
+      /* Flex-basis, flex-grow. flex-shrink*/
+      /* Dificilmente encontraremos a estos tres atributos de manera individual porque han sido abreviadas en 3 valores del atributo "flex"*/
+    }
+    .cajaHija1{
+      flex: 1 1 auto;
+    }
+    .cajaHija2{
+      flex: 1 1 auto;
+    }
+    .cajaHija3{
+      flex: 1 1 auto;
+    }
+    .cajaHija4{
+      flex: 1 1 auto;
+    }
+    .cajaHija5{
+      flex: 1 1 auto;
+    }
+    .cajaHija6{
+      flex: 1 1 auto;
+    }
+  </style>
+</head>
+<body>
+  <section class="cajaPadre">
+    <article class="cajaHija1">A</article>
+    <article class="cajaHija2">B</article>
+    <article class="cajaHija3">C</article>
+    <article class="cajaHija4">D</article>
+    <article class="cajaHija5">E</article>
+    <article class="cajaHija6">F</article>
+  </section>
+</body>
+</html>
